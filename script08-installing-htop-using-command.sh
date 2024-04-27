@@ -1,8 +1,8 @@
 #!/bin/bash
 
-command=/usr/bin/htop
+command=htop
 
-if [ -f $command ]
+if command -v $command
 
 then
     echo "$command command is available, let's run it..."
@@ -11,7 +11,7 @@ else
 
     echo "$command not found so installing it..."
 
-    sudo apt update && sudo apt-get install htop -y
+    sudo apt update && sudo apt-get install $command -y
 
 fi
 
