@@ -48,12 +48,45 @@
 # --------- Script Five Question ---------
 # Create a bash script that asks the user to enter a number and then prints "Hello" that many times using a while loop.
 
-echo "Enter a number :"
+# echo "Enter a number :"
+# read myvar 
+
+# while [ $myvar -gt 0 ]
+# do
+#     echo "Hello"
+#     myvar=$((myvar-1))
+#     sleep 0.5s
+# done
+
+# --------- Script Six Question ---------
+# Write a bash script that counts down from 5 to 1 and then prints "Blast off!" using a while loop.
+
+# myvar=5
+
+# while [ $myvar -gt 0 ]
+# do 
+#     echo "$myvar"
+#     myvar=$((myvar-1))
+#     sleep 0.5s
+# done
+
+# echo "Blast off!"
+
+# --------- Script Seven Question ---------
+# Create a bash script that continuously asks the user to enter a password until they enter the correct password "abc123".
+
+echo "Enter a password: "
 read myvar 
 
-while [ $myvar -gt 0 ]
+while true
 do
-    echo "Hello"
-    myvar=$((myvar-1))
-    sleep 0.5s
+    if [ "$myvar" = "abc123" ]
+    then
+        echo "Correct Password"
+        break
+    else
+        echo "Incorrect Password"
+        echo "Enter a password: "
+        read myvar
+    fi
 done
